@@ -19,8 +19,10 @@ jobs:
 
   call_workflow_test:
     name: Node Test
+    needs: call_workflow_build
     uses: devsecops-lab-ciandt/devsecops-workflows/.github/workflows/test-node.yml@main
 
   call_workflow_deploy:
-    name: Node Test
+    name: Node Deploy
+    needs: call_workflow_test
     uses: devsecops-lab-ciandt/devsecops-workflows/.github/workflows/deploy-node.yml@main
