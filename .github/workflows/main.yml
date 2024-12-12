@@ -1,0 +1,18 @@
+name: CI/CD Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner_scale_set:
+        description: Runner Scale Set
+        required: true
+        default: 'rss-primary-linux'
+        type: choice
+        options:
+          - rss-primary-linux
+          - rss-secondary-linux
+
+jobs:
+  call_workflow_build:
+    name: Java Build
+    uses: devsecops-lab-ciandt/devsecops-workflows/.github/workflows/node-java.yml@main
