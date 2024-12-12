@@ -14,5 +14,5 @@ on:
 
 jobs:
   call_workflow_build:
-    name: Java Build
-    uses: devsecops-lab-ciandt/devsecops-workflows/.github/workflows/node-java.yml@main
+    name: Node Build
+    uses: devsecops-lab-ciandt/devsecops-workflows/.github/workflows/build-node.yml@main
