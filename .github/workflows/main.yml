@@ -6,11 +6,11 @@ on:
       runner_scale_set:
         description: Runner Scale Set
         required: true
-        default: 'rss-primary-linux'
+        default: 'arc-primary'
         type: choice
         options:
-          - rss-primary-linux
-          - rss-secondary-linux
+          - arc-primary
+          - arc-secondary
 
 jobs:
   call_workflow_build:
